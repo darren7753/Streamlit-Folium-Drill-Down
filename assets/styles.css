@@ -1,45 +1,7 @@
-.st-key-styled_container1 {
-    background-color: #fefefe;
-    border-radius: 1rem;
-    padding: 0.7rem 1rem;
-    box-shadow: 0px 0px 20px 0px rgba(128, 128, 128, 0.3);
-}
-
-.st-key-styled_container2 {
+.st-key-styled_container {
     background-color: #fefefe;
     border-radius: 1rem;
     padding:1rem 1rem;
     box-shadow: 0px 0px 20px 0px rgba(128, 128, 128, 0.3);
     min-height: 586.78px;
-}
-
-.st-key-map_container {
-    min-height: 477.2px;
-}
-
-.st-key-styled_container3 {
-    background-color: #fefefe;
-    border-radius: 1rem;
-    padding: 0.7rem 1rem;
-    box-shadow: 0px 0px 20px 0px rgba(128, 128, 128, 0.3);
-}
-
-.st-key-styled_container4,
-.st-key-styled_container5,
-.st-key-styled_container6,
-.st-key-styled_container7,
-.st-key-styled_container8 {
-    background-color: #fefefe;
-    border-radius: 1rem;
-    padding: 0.5rem 0.5rem;
-    box-shadow: 0px 0px 20px 0px rgba(128, 128, 128, 0.3);
-    transition: box-shadow 0.3s ease;
-}
-
-.st-key-styled_container4:hover,
-.st-key-styled_container5:hover,
-.st-key-styled_container6:hover,
-.st-key-styled_container7:hover,
-.st-key-styled_container8:hover {
-    box-shadow: 0px 0px 20px 0px rgba(4, 88, 175, 0.4);
 }
