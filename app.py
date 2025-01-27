@@ -226,9 +226,9 @@ def callback():
 
 # Reset Map Views
 def reset_to_province_view():
-    st.session_state.clicked_province = None
-    st.session_state.clicked_city = None
     st.session_state.clicked_district = None
+    st.session_state.clicked_city = None
+    st.session_state.clicked_province = None
     st.session_state.center = center_start
     st.session_state.zoom = zoom_start
     st.session_state.reset_in_progress = True
@@ -236,6 +236,10 @@ def reset_to_province_view():
 def reset_to_city_view():
     st.session_state.clicked_district = None
     st.session_state.clicked_city = None
+    st.session_state.reset_in_progress = True
+
+def reset_to_district_view():
+    st.session_state.clicked_district = None
     st.session_state.reset_in_progress = True
 
 # Calculate Zoom
@@ -385,7 +389,8 @@ def display_map():
         center=current_center,
         zoom=current_zoom,
         feature_group_to_add=feature_group_to_add,
-        key='province_map',
+        key="province_map",
+        returned_objects=["last_clicked", "last_active_drawing"],
         on_change=callback
     )
 
@@ -397,10 +402,10 @@ with st.container(key="styled_container"):
         with st.container():
             display_map()
 
-        col1_map, col2_map, col3_map = st.columns([1, 0.3, 0.3])
+        col1_map, col2_map, col3_map, col4_map = st.columns([1, 0.4, 0.4, 0.4])
         with col2_map:
             st.button(
-                "Back to Province View",
+                "Back to Country",
                 disabled=not st.session_state.clicked_province,
                 use_container_width=True,
                 on_click=reset_to_province_view,
@@ -409,10 +414,19 @@ with st.container(key="styled_container"):
             )
         with col3_map:
             st.button(
-                "Back to City View",
+                "Back to Province",
                 disabled=not st.session_state.clicked_city,
                 use_container_width=True,
                 on_click=reset_to_city_view,
+                type="primary",
+                icon="↩"
+            )
+        with col4_map:
+            st.button(
+                "Back to City",
+                disabled=not st.session_state.clicked_district,
+                use_container_width=True,
+                on_click=reset_to_district_view,
                 type="primary",
                 icon="↩"
             )
