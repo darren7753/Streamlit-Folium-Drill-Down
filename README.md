@@ -1,0 +1,5 @@
+# Streamlit Folium Drill-Down Map App <a href="https://folium-drill-down.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit"></a>
+
+This project demonstrates how to implement a smooth drill-down functionality in a Streamlit app using the `streamlit-folium` library. The app allows users to interactively explore geographical data by drilling down through multiple levels (e.g., national, regional, city, district) for any country or region. The solution is highly flexible and can be adapted to various geographical hierarchies and datasets.
+
+The project originated from an issue I raised in the `streamlit-folium` repository: [Can Streamlit Folium support smooth drill-down functionality? #244](https://github.com/randyzwitch/streamlit-folium/issues/244). The goal was to ensure seamless navigation through nested geographical levels while avoiding unnecessary map re-renders, resulting in a smooth and efficient user experience.
