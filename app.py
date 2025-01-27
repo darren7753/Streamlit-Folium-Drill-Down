@@ -122,8 +122,8 @@ if "center" not in st.session_state:
     st.session_state.center = center_start
 if "zoom" not in st.session_state:
     st.session_state.zoom = zoom_start
-if "reset_in_progress" not in st.session_state:
-    st.session_state.reset_in_progress = False
+# if "reset_in_progress" not in st.session_state:
+#     st.session_state.reset_in_progress = False
 
 # Map Stylings
 def create_colormap(data, column="CUSTOMER_GROWTH"):
@@ -198,9 +198,9 @@ def highlight_function(feature):
 
 # Map Interactions
 def callback():
-    if st.session_state.reset_in_progress:
-        st.session_state.reset_in_progress = False
-        return
+    # if st.session_state.reset_in_progress:
+    #     st.session_state.reset_in_progress = False
+    #     return
 
     if st.session_state['province_map'].get('last_clicked'):
         last_active_drawing = st.session_state['province_map']['last_active_drawing']
@@ -231,16 +231,16 @@ def reset_to_province_view():
     st.session_state.clicked_province = None
     st.session_state.center = center_start
     st.session_state.zoom = zoom_start
-    st.session_state.reset_in_progress = True
+    # st.session_state.reset_in_progress = True
 
 def reset_to_city_view():
     st.session_state.clicked_district = None
     st.session_state.clicked_city = None
-    st.session_state.reset_in_progress = True
+    # st.session_state.reset_in_progress = True
 
 def reset_to_district_view():
     st.session_state.clicked_district = None
-    st.session_state.reset_in_progress = True
+    # st.session_state.reset_in_progress = True
 
 # Calculate Zoom
 class FitBounds:
